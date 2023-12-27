@@ -6,8 +6,8 @@ const qr = require("qr-image")
 
 
 const sendMail = async (req, res) => {
-  const { user, emailID, paymentID } = req.body;
-  const qrData = qr.imageSync("123", { type: "png" })
+  const { user, emailID, id } = req.body;
+  const qrData = qr.imageSync(id, { type: "png" })
 
   const info = {
     to: emailID,
