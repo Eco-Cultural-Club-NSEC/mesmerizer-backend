@@ -4,7 +4,6 @@ const transporter = require("../config/nodemailer-config")
 
 const qr = require("qr-image")
 
-
 const sendMail = async (req, res) => {
   const { user, emailID, id } = req.body;
   const qrData = qr.imageSync(id, { type: "png" })
